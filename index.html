@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8"/>
     <title>
       Welcome to Zentrixia 
@@ -13,11 +14,18 @@
     <a href=#instructors>Instructors</a>
     <a href=#joinNow>Join Now</a>
     
-    <section id="home">
+    <section id="hero" class="hero">
+  <div class="hero-content">
     <h1>Zentrixia Learning Hub</h1>
-    <p>Learn Fast. Learn Smart </p>
-    <button>Explore Courses</button>
-    </section>
+    <p>Learn Fast. Learn Smart</p>
+     <button id="exploreButton" onclick="document.getElementById('courses').scrollIntoView({behavior:'smooth'});">Explore Courses</button>
+   
+    
+  </div>
+</section>
+
+    
+    
     
     <section id="courses">
       <h2>Our Courses</h2>
@@ -97,9 +105,9 @@
     </section>
     
     <section id="joinNow">
-      <h2>Join Zentrixia Today</h2>
+      
       <form action="form.php" method="POST">
-        
+        <h2>Join Zentrixia Today</h2>
         <div>
         <label for="name">Full Name: </label>
         <input type="text" id="name" name="name" placeholder="Enter your full name" required>
@@ -117,7 +125,7 @@
         
         <div>
         <label for="courses">Select Course: </label>
-        <select id="courses" name="courses" >
+        <select id="courseSelect" name="courses" >
           <option value="java">Java Development </option>
           <option value="python">Python Data Science </option>
           <option value="mysql">MySQL Database</option>
@@ -128,8 +136,8 @@
         </div>
         
         <div>
-        <input type="checkbox" id="tnc" value="agree" name="tnc" required>
-        <label for="tnc">I agree to accept the Terms & Conditions </label>
+        <label for="tnc">I agree to accept the Terms & Conditions <input type="checkbox" id="tnc" value="agree" name="tnc" required>
+        </label>
         </div>
         
         <div>
