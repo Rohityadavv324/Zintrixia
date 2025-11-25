@@ -1,150 +1,309 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8"/>
-    <title>
-      Welcome to Zentrixia 
-    </title>
-  </head>
-  <body>
-    <a href=#home>Home</a>
-    <a href=#courses>Courses</a>
-    <a href=#programs>Programs</a>
-    <a href=#instructors>Instructors</a>
-    <a href=#joinNow>Join Now</a>
-    
-    <section id="hero" class="hero">
-  <div class="hero-content">
-    <h1>Zentrixia Learning Hub</h1>
-    <p>Learn Fast. Learn Smart</p>
-     <button id="exploreButton" onclick="document.getElementById('courses').scrollIntoView({behavior:'smooth'});">Explore Courses</button>
-   
-    
-  </div>
-</section>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Zentrixia Learning Hub</title>
 
-    
-    
-    
-    <section id="courses">
-      <h2>Our Courses</h2>
-    
-    <div>
-      <h3>Course: Java development using Spring</h3>
-      <p>Duration: 7 Days</p>
-      <p>Level: Intermediate</p>
-      <p>Price: ₹1499</p>
-    </div>
-    <div>
-      <h3>Course: Data Interpretation Using Python </h3>
-      <p>Duration: 14 Days</p>
-      <p>Level: Intermediate</p>
-      <p>Price: ₹1399</p>
-    </div>
-    <div>
-      <h3>Course: MySQL Database</h3>
-      <p>Duration:5 Days</p>
-      <p>Level: Beginner</p>
-      <p>Price: ₹499</p>
-    </div>
-    <div>
-      <h3>Course: Object Oriented Programming in C++</h3>
-      <p>Duration: 2 weeks</p>
-      <p>Level: Intermediate</p>
-      <p>Price: ₹1599</p>
-    </div>
-    <div>
-      <h3>Course:Kubernetes and Docker Introduction</h3>
-      <p>Duration: 4 weeks</p>
-      <p>Level: Advanced</p>
-      <p>Price: ₹2299</p>
-    </div>
-    <div>
-      <h3>Course: MERN Stack</h3>
-      <p>Duration: 4 weeks</p>
-      <p>Level: Intermediate</p>
-      <p>Price: ₹1699</p>
-    </div>
-    
-    </section>
-    
-    <section id="programs">
-      <h2>Our Programs</h2>
-      <div>
-        <h3>Full Stack Developer Program</h3>
-        <p>a 12 weeks learning program to equip you with skills required in website building in today's market, frontend, backend, databases, AI integration </p>
+  <!-- Google Font (fallbacks provided) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    // tiny accessibility: prefers-reduced-motion detection
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="#home" class="brand-link">Zentrixia</a>
+        <span class="tagline">Learn Fast. Learn Smart.</span>
       </div>
-      <div> 
-        <h3>Advance Data Visualization using Power BI</h3>
-        <p>A 4 weeks long extensive course to upskill you with the knowledge of data handling and visualization using Power BI</p>
-      </div>
-      <div>
-        <h3>Advance Java Development</h3>
-        <p>A 8 weeks long course dedicated to Java website development using Springboot and it's frameworks</p>
-      </div>
-    </section>
-    
-    <section id='instructors'>
-      <h2>Meet our Instructors </h2>
-      <div>
-        <img src="" alt="Instructor Photo"/>
-        <h3>Aman Kumar</h3>
-        <p>Expertise in website development</p>
-      </div>
-      <div>
-        <img src="" alt="Instructor Photo"/>
-        <h3>Dr. Neha Srivastava</h3>
-        <p>Expertise in OOPs and Dynamic Programming</p>
-      </div>
-      <div>
-        <img src="https://via.placeholder.com/150" alt="Instructor Photo"/>
-        <h3>Dr. Rohit Bansal</h3>
-        <p>Excels in Data Science</p>
+
+      <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="mainNav">
+        <span class="burger"></span>
+      </button>
+
+      <nav id="mainNav" class="main-nav" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#courses">Courses</a>
+        <a href="#programs">Programs</a>
+        <a href="#instructors">Instructors</a>
+        <a href="#joinNow" class="btn-ghost">Join Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1 class="hero-title">Zentrixia Learning Hub</h1>
+          <p class="hero-sub">Short, practical micro-certifications in Web Dev, AI, Cloud & Data — designed to ship real skills fast.</p>
+          <div class="hero-ctas">
+            <button id="exploreBtn" class="btn-primary">Explore Courses</button>
+            <a href="#programs" class="btn-outline">Our Programs</a>
+          </div>
+        </div>
+
+        <div class="hero-card" aria-hidden="true">
+          <!-- decorative card with highlights -->
+          <div class="stat">
+            <div class="stat-value">6+</div>
+            <div class="stat-label">Short Courses</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">3</div>
+            <div class="stat-label">Signature Programs</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">10K+</div>
+            <div class="stat-label">Learner Hours</div>
+          </div>
+        </div>
       </div>
     </section>
-    
-    <section id="joinNow">
-      
-      <form action="form.php" method="POST">
-        <h2>Join Zentrixia Today</h2>
-        <div>
-        <label for="name">Full Name: </label>
-        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
-        </div>
-        
-        <div>
-        <label for="email">Email: </label>
-        <input type="email" id="email" name="email" placeholder="Enter your email" required>
-        </div>
-        
-        <div>
-        <label for="password">Password: </label>
-        <input type="password" id="password" name="password" placeholder="Create new password" required>
-        </div>
-        
-        <div>
-        <label for="courses">Select Course: </label>
-        <select id="courseSelect" name="courses" >
-          <option value="java">Java Development </option>
-          <option value="python">Python Data Science </option>
-          <option value="mysql">MySQL Database</option>
-          <option value="cpp">OOP in C++ </option>
-          <option value="docker">Kubernetes & Docker</option>
-          <option value="mern">MERN Stack</option>
-        </select>
-        </div>
-        
-        <div>
-        <label for="tnc">I agree to accept the Terms & Conditions <input type="checkbox" id="tnc" value="agree" name="tnc" required>
-        </label>
-        </div>
-        
-        <div>
-        <button type="submit">Register</button>
-        </div>
-        
-      </form>
+
+    <!-- ABOUT -->
+    <section id="about" class="container about">
+      <p>
+        Zentrixia offers 5–15 day hands-on programs focused on practical implementation. The platform emphasizes concise learning paths,
+        project work, and immediate application of skills for students and professionals.
+      </p>
     </section>
-  </body>
+
+    <!-- COURSES -->
+    <section id="courses" class="container section">
+      <h2 class="section-title">Our Courses</h2>
+      <div class="grid courses-grid" id="coursesGrid">
+        <!-- course cards (static for now; will be dynamic when you add backend) -->
+        <article class="card course-card">
+          <h3 class="card-title">Java Development with Spring</h3>
+          <p class="card-desc">Server-side Java, Spring Boot basics and hands-on mini projects.</p>
+          <ul class="meta">
+            <li>7 Days</li>
+            <li>Intermediate</li>
+            <li>₹1499</li>
+          </ul>
+          <div class="card-actions">
+            <a href="#joinNow" class="btn-outline">Enroll</a>
+            <a class="muted-link" href="#">Syllabus</a>
+          </div>
+        </article>
+
+        <article class="card course-card">
+          <h3 class="card-title">Data Interpretation using Python</h3>
+          <p class="card-desc">Pandas, plotting & practical data analysis exercises.</p>
+          <ul class="meta">
+            <li>14 Days</li>
+            <li>Intermediate</li>
+            <li>₹1399</li>
+          </ul>
+          <div class="card-actions">
+            <a href="#joinNow" class="btn-outline">Enroll</a>
+            <a class="muted-link" href="#">Syllabus</a>
+          </div>
+        </article>
+
+        <article class="card course-card">
+          <h3 class="card-title">MySQL Database</h3>
+          <p class="card-desc">Schema design, queries, joins & basic optimization.</p>
+          <ul class="meta">
+            <li>5 Days</li>
+            <li>Beginner</li>
+            <li>₹499</li>
+          </ul>
+          <div class="card-actions">
+            <a href="#joinNow" class="btn-outline">Enroll</a>
+            <a class="muted-link" href="#">Syllabus</a>
+          </div>
+        </article>
+
+        <article class="card course-card">
+          <h3 class="card-title">OOP in C++</h3>
+          <p class="card-desc">Classes, inheritance, and practice problems for solid fundamentals.</p>
+          <ul class="meta">
+            <li>2 Weeks</li>
+            <li>Intermediate</li>
+            <li>₹1599</li>
+          </ul>
+          <div class="card-actions">
+            <a href="#joinNow" class="btn-outline">Enroll</a>
+            <a class="muted-link" href="#">Syllabus</a>
+          </div>
+        </article>
+
+        <article class="card course-card">
+          <h3 class="card-title">Kubernetes & Docker Intro</h3>
+          <p class="card-desc">Containers & orchestration fundamentals with hands-on labs.</p>
+          <ul class="meta">
+            <li>4 Weeks</li>
+            <li>Advanced</li>
+            <li>₹2299</li>
+          </ul>
+          <div class="card-actions">
+            <a href="#joinNow" class="btn-outline">Enroll</a>
+            <a class="muted-link" href="#">Syllabus</a>
+          </div>
+        </article>
+
+        <article class="card course-card">
+          <h3 class="card-title">MERN Stack Essentials</h3>
+          <p class="card-desc">React + Node fundamentals to build a small full-stack app.</p>
+          <ul class="meta">
+            <li>4 Weeks</li>
+            <li>Intermediate</li>
+            <li>₹1699</li>
+          </ul>
+          <div class="card-actions">
+            <a href="#joinNow" class="btn-outline">Enroll</a>
+            <a class="muted-link" href="#">Syllabus</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROGRAMS -->
+    <section id="programs" class="container section">
+      <h2 class="section-title">Signature Programs</h2>
+      <div class="grid programs-grid">
+        <div class="card program-card">
+          <h3>Full Stack Developer Program</h3>
+          <p>12-week immersive track covering frontend, backend, DB and deployment.</p>
+        </div>
+        <div class="card program-card">
+          <h3>Advanced Data Visualization</h3>
+          <p>4-week program on Power BI and dashboard storytelling.</p>
+        </div>
+        <div class="card program-card">
+          <h3>Advanced Java Development</h3>
+          <p>8-week advanced module focused on Spring Boot & REST APIs.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSTRUCTORS -->
+    <section id="instructors" class="container section">
+      <h2 class="section-title">Meet Our Instructors</h2>
+      <div class="grid instructors-grid">
+        <div class="card instructor-card">
+          <img src="https://via.placeholder.com/140" alt="Aman Kumar" class="avatar" />
+          <h4>Aman Kumar</h4>
+          <p class="muted">Frontend & Web Development</p>
+        </div>
+
+        <div class="card instructor-card">
+          <img src="https://via.placeholder.com/140" alt="Dr Neha Srivastava" class="avatar" />
+          <h4>Dr. Neha Srivastava</h4>
+          <p class="muted">OOP & Algorithms</p>
+        </div>
+
+        <div class="card instructor-card">
+          <img src="https://via.placeholder.com/140" alt="Dr Rohit Bansal" class="avatar" />
+          <h4>Dr. Rohit Bansal</h4>
+          <p class="muted">Data Science & ML</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- JOIN (form) -->
+    <section id="joinNow" class="container section">
+      <div class="form-layout">
+        <div class="form-card">
+          <h2 class="form-title">Join Zentrixia Today</h2>
+          <p class="muted">Register now — no backend required for demo. (Form posts to form.php)</p>
+          <form action="form.php" method="POST" novalidate>
+            <div class="form-row">
+              <label for="name">Full Name</label>
+              <input id="name" name="name" type="text" required placeholder="Enter full name" />
+            </div>
+
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required placeholder="Enter email" />
+            </div>
+
+            <div class="form-row">
+              <label for="password">Password</label>
+              <input id="password" name="password" type="password" required placeholder="Create password" />
+            </div>
+
+            <div class="form-row">
+              <label for="courseSelect">Select Course</label>
+              <select id="courseSelect" name="course">
+                <option value="java">Java Development</option>
+                <option value="python">Python Data Science</option>
+                <option value="mysql">MySQL Database</option>
+                <option value="cpp">OOP in C++</option>
+                <option value="docker">Kubernetes & Docker</option>
+                <option value="mern">MERN Stack</option>
+              </select>
+            </div>
+
+            <div class="form-row form-row-inline">
+              <input id="tnc" name="tnc" type="checkbox" value="agree" required />
+              <label for="tnc" class="small">I agree to the Terms &amp; Conditions</label>
+            </div>
+
+            <div class="form-row">
+              <button type="submit" class="btn-primary">Register</button>
+            </div>
+          </form>
+        </div>
+
+        <aside class="form-side">
+          <h3>Why Zentrixia?</h3>
+          <ul>
+            <li>Short, outcome-focused courses</li>
+            <li>Project-based learning</li>
+            <li>Practical exercises & portfolio-ready output</li>
+          </ul>
+          <p class="muted small">Operating hours: 10:00 AM – 9:00 PM (Mon–Fri)</p>
+          <p class="muted small">Contact: hello@zentrixia.tech</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© 2025 Zentrixia Learning Hub</div>
+      <div class="footer-links">
+        <a href="mailto:hello@zentrixia.tech">hello@zentrixia.tech</a>
+        <span class="muted">&middot;</span>
+        <a href="#">Privacy</a>
+        <span class="muted">&middot;</span>
+        <a href="#">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    const navToggle = document.getElementById('navToggle');
+    const mainNav = document.getElementById('mainNav');
+    navToggle.addEventListener('click', () => {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', !expanded);
+      mainNav.classList.toggle('open');
+    });
+
+    // Smooth scroll for main CTA and internal links
+    document.getElementById('exploreBtn').addEventListener('click', () => {
+      document.getElementById('courses').scrollIntoView({ behavior: 'smooth' });
+    });
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', function(e){
+        const href = this.getAttribute('href');
+        if (href.length > 1) {
+          e.preventDefault();
+          document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
 </html>
